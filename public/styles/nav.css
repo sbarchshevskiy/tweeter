@@ -1,0 +1,43 @@
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.navbar-inner {
+  height: 120px;  
+  background-color: #4056A1;
+  display : flex;
+  justify-content : flex-end;
+
+
+}
+
+
+body {
+  color: #f4f1ec;
+  background-color: #4056A1;
+  font-display: FFFFFF;
+  font-size: 24px;
+  font-family: Bungee;
+
+}
+
+navi {
+    background-color: #4056A1;
+    display : flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 120px;
+    padding: 1.5em;
+    opacity: 100%;
+
+
+}
+
