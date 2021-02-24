@@ -43,8 +43,9 @@
  
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
+    <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
 
-    <script src="./composer-char-counter.js"></script>
+
   </head>
 
   <body>
@@ -60,38 +61,35 @@
     </div>
   </nav>
 
-  <div class="userbox">
-    <h2>inside userbox</h2>
-
-    <header>
-      <div class="user">
-          <img src="/images/profile-hex.png"> 
-      </div>
-      <br>
-      <div>
-          <h2>Your Name</h2>
-      </div>
-  </header>
-  </div>
-
-
-
-
     <!-- Page-specific (main) content here -->
     <main class="container">
       <div>
-        <h2>inside main container</h2>
+        <div class="userbox">
+      
+          <header>
+            <div class="user">
+                <img src="/images/profile-hex.png"> 
+            </div>
+            <br>
+            <div>
+                <h2>Your Name</h2>
+            </div>
+        </header>
+        </div>
         <section class="new-tweet">
           <h2>Compose Tweet</h2>
-      
-          <form method="POST" action="/tweets">
-            <label for="tweet-text">What are you humming about?</label>
-            <textarea name="text" id="tweet-text"></textarea>
-            <div>
-              <button type="submit">Tweet</button>
-              <output name="counter" class="counter" for="tweet-text">140</output>
+            <div class="tweetBox">
+                <form method="POST" action="/tweets">
+                    <label for="tweet-text">What are you humming about?</label>
+                    <div class="tweetTextArea">
+                        <textarea name="text" id="tweet-text"></textarea>
+                    </div>
+                    <div class="tweetButtonAndCounter">
+                        <button type="submit">Tweet</button>
+                        <output name="counter" class="counter" for="tweet-text">140</output>
+                    </div>
+                </form>
             </div>
-          </form>
         </section>
       </div>
     </main>

@@ -37,12 +37,27 @@ main {
 }
 
 
-
 .container {
   border: 2px solid gray;
   display: flex;
 }
 
+.tweetBox {
+    display: flex;
+}
+.tweetTextArea {
+    display : flex;
+    justify-content: center;
+}
+
+.tweetButtonAndCounter {
+    display: flex;
+    justify-content: space-between;
+
+}
+h2 {
+    display: flex;
+}
 
 
 /*

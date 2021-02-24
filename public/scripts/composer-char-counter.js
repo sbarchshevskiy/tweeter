@@ -1,26 +1,16 @@
-const $ = require("jquery");
+$(document).ready(function () {
+  $("#tweet-text").on("input", function (event) {
+    const $inputText = $(event.target).closest("section");
+    const $text = $inputText.find("#tweet-text");
+    const $counter = $inputText.find(".counter");
 
+    let charsCount = $text.val().length;
+    $counter.html(140 - charsCount);
 
-// $("#input").on("input", function() {
-//   $("#count").text(this.value.length);
-// });
-
-// $(document).ready(function() {
-//   // --- our code goes here ---
-// });
-
-
-
-// $(document).ready(function() {
-//   $('.new-tweet').on('input', function() {
-//     const counter = $(".counter").text(this.value.length);
-
-    
-//   });
-
-// }); // document ready
-
-
-// $(document).ready(function() {
-//   console.log();
-// });
+    if (charsCount <= 140) {
+      $counter.removeClass("off-limit-text");
+    } else {
+      $counter.addClass("off-limit-text");
+    }
+  })
+})

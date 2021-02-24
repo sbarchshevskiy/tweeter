@@ -1,6 +1,6 @@
 .user {
     border: 2px solid gray;
-    display: block;
+    display: flex;
     flex-direction: column;
 
     justify-content: center;

@@ -1,7 +1,12 @@
 .new-tweet{
     display: block;
     justify-content: center;
-    flex-direction: coulmn;
+    flex-direction: column;
 
+}
+
+.off-limit-text {
+    color: red;
+    font-family: Bungee;
 }
 
