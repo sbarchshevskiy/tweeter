@@ -6,30 +6,13 @@ html {
   box-sizing: inherit;
 }
 
-.navbar-inner {
-  height: 120px;  
-  background-color: #4056A1;
-  display : flex;
-  justify-content : flex-end;
 
 
-}
-
-
-body {
-  color: #f4f1ec;
-  background-color: #4056A1;
-  font-display: FFFFFF;
-  font-size: 24px;
-  font-family: Bungee;
-
-}
-
-navi {
-    background-color: #4056A1;
+.nav {
+    border: 2px solid gray;
     display : flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: baseline;
     position: fixed;
     top: 0px;
     left: 0px;
@@ -37,6 +20,28 @@ navi {
     height: 120px;
     padding: 1.5em;
     opacity: 100%;
+    background-color: #4056A1;
 
 }
+
+.logo{
+    border: 2px solid gray;
+    display: flex;
+    font-size: 24px;
+    justify-content: flex-end;
+    outline: black;
+}
+
+.createNewTweet {
+  
+    border: 2px solid gray;
+    display: flex;
+    align-items: flex-start;
+    font-family: Sourc-sans-pro;
+
+}
+
+
+
+
 

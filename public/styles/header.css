@@ -1,0 +1,21 @@
+.user {
+    border: 2px solid gray;
+    display: block;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: bisque;
+}
+.userbox {
+   
+    border: 2px solid gray;
+    display: block;
+    flex-direction: column;
+    width: 500 px;
+    height: 500 px;
+    justify-content: center;
+    align-self: center;
+
+}
