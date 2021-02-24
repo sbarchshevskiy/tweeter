@@ -17,33 +17,39 @@ html {
 body {
   border: 2px solid gray;
   display : flex;
+  flex-direction: column;
   align-items: center;
   color: #accece;
   background-color: #a8abb5;
   font-size: 24px;
   justify-content: center;
   font-family: Bungee;
-  margin-top: 140px;
+  margin-top: 120px;
+
+  
 }
 
 main {
   border: 2px solid gray;
   display: flex;
+  justify-content: center;
+
   flex-direction: column;
   align-items: flex-start;
-  margin-right: 5%;
-  margin-left: 5%;
+  width: 90%;
+  /* margin-right: 5%;
+  margin-left: 5%; */
 
 }
 
 
 .container {
   border: 2px solid gray;
-  display: flex;
+  display: row;
 }
 
 .tweetBox {
-    display: flex;
+    display: block;
 }
 .tweetTextArea {
     display : flex;
@@ -59,6 +65,13 @@ h2 {
     display: flex;
 }
 
+#avatar {
+  display: flex;
+  justify-content: left;
+  border: 2px solid gray;
+  max-width: 80px;
+  max-height: 80px;
+}
 
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions

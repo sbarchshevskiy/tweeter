@@ -2,11 +2,96 @@
     display: block;
     justify-content: center;
     flex-direction: column;
+    width: 100%;
 
 }
 
 .off-limit-text {
     color: red;
     font-family: Bungee;
+}
+
+.newTweetFormArea {
+    border: 2px solid red;
+    display: block;
+    width: 100%;
+}
+
+
+.newTweetForm {
+    border: 2px solid gray;
+    display: flex;
+    flex-direction: row ;
+    width: 100%;
+
+    
+}
+
+#tweet-text{
+    width: 100%;
+    border: 0;
+    border-bottom: 2px solid rgb(34, 6, 6);
+
+}
+.tweetTextArea{
+    flex-direction: row;
+    border: 2px solid gray;
+    display: block;
+    width: 100%;
+}
+
+.avatar {
+  max-width: 80px;
+  max-height: 80px;
+  margin-right: 0.5em;
+}
+
+.userName {
+    border: 2px solid gray;
+    justify-content: flex-start;
+    width: 80%;
+}
+.likesRetweet{
+    display: flex;
+    border: 2px solid gray;
+    justify-content: flex-end;
+    list-style-type: none;
+}
+
+.handle {
+    
+}
+
+#tweet-list {
+    margin-top: 2em;
+    width: 100%;
+    
+}
+
+ul { 
+    list-style-type: none; 
+}
+
+
+.tweet-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.tweet-header > div{
+    display: flex;
+    margin: 1.5em;
+}
+
+.tweet {
+    border: 4px solid black;
+    padding: 1em;
+
+}
+.tweet-footer {
+    display: flex;
+    border-top: black solid 4px;
+    justify-content: space-between;
+    padding-top: 0.5em;
 }
 
