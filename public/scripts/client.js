@@ -8,37 +8,27 @@ $(document).ready(function() {
       method: 'GET',
     })
       .done((data) => {
-  
         $("#tweet-text").empty();
-        console.log('tweet text entered');
-        console.log('data',data);
+
         renderTweets(data);
-  
       })
       .fail((err) => {
-        // fail case
         console.log('error message: ',err.message);
       })
       .always(() => console.log('tweet was sent'));
 
     $(".tweet-box-form").on('submit', function(event) {
       event.preventDefault();
-      console.log(event.preventDefault());
     });
-    
 
     const tweetBox = $(this).children('input[type="submit"]');
-    // const message = tweetBox.val();
- 
     tweetBox.val('');
-
   };
-  console.log('run test2');
 
   loadTweets();
 
-
   const seizeEnteredTweet = (message) => {
+
     const url = `http://localhost:8081/tweets`;
 
     $.ajax({
@@ -47,13 +37,15 @@ $(document).ready(function() {
       data: message
     })
       .done((data) => {
-  
+
         $("#tweet-text").empty();
         renderTweets(data);
-  
+        loadTweets();
+        console.log('test');
+
       })
       .fail((err) => {
-        // fail case
+      
         console.log('error message: ',err.message);
       })
       .always(() => console.log('tweet was sent'));
@@ -62,15 +54,26 @@ $(document).ready(function() {
 
   $(".tweet-box-form").on('submit', function(event) {
     event.preventDefault();
-    seizeEnteredTweet($(".tweet-box-form").serialize());
+    const message = $("#tweet-text").val();
+    if (message.length <= 140) {
+      seizeEnteredTweet($(".tweet-box-form").serialize());
+    } else if (message.length === 0) {
+      console.log('message too short');
+    } else {
+      console.log('message too long');
+      
+    }
+    
   });
 
   const tweetBox = $(this).children('input[type="submit"]');
-  // const message = tweetBox.val();
 
   tweetBox.val('');
 });
 
+// const renderErrorMessage = function() {
+
+// }
 
 const renderTweets = function(tweets) {
   //ads elements to container
@@ -92,7 +95,13 @@ const createTweetElement = function(record) {
   </div>
   <footer class="tweet-footer">
       <div>  ${record.created_at}</div>
-      <div>  L R M </div>
+      <div> 
+      <ul>
+      <li>👍</li>
+      <li>🏳</li>
+      <li>✉️</li>
+      </ul>
+      </div>
   </footer>
 </article>
 `);

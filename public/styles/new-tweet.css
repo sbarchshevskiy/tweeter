@@ -88,6 +88,7 @@ ul {
 .tweet {
     border: 4px solid black;
     padding: 1em;
+    width: 100%;
 }
 .tweet-footer {
     display: flex;
