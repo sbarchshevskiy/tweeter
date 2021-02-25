@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
     <!-- Meta Information -->
@@ -7,7 +8,7 @@
 
     <!-- External CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
-          type="text/css"/>
+        type="text/css" />
 
 
     <!-- Bungee font 400 -->
@@ -32,10 +33,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@1,300&display=swap" rel="stylesheet">
 
     <!-- App CSS -->
-    <link rel="stylesheet" href="/styles/layout.css" type="text/css"/>
-    <link rel="stylesheet" href="/styles/nav.css" type="text/css"/>
-    <link rel="stylesheet" href="/styles/header.css" type="text/css"/>
-    <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css"/>
+    <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/header.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
 
 
     <!-- External JS -->
@@ -49,40 +50,41 @@
 </head>
 
 <body>
-<!-- Top nav bar (fixed) -->
-<nav>
-    <div class="nav">
-        <div class="logo">
-            <span>tweeter</span>
+    <!-- Top nav bar (fixed) -->
+    <nav>
+        <div class="nav">
+            <div class="logo">
+                <span>twaater</span>
+            </div>
+            <div class="createNewTweet">
+                <p><strong>Write</strong> a new tweet</p>
+            </div>
         </div>
-        <div class="createNewTweet">
-            <p><strong>Write</strong> a new tweet</p>
-        </div>
+    </nav>
+
+    <div class="userbox">
+
+        <header>
+            <div class="user">
+                <img src="/images/profile-hex.png">
+                <h4>Jior Name</h4>
+            </div>
+        </header>
     </div>
-</nav>
 
-<div class="userbox">
+    <!-- Page-specific (main) content here -->
+    <main class="container">
 
-    <header>
-        <div class="user">
-            <img src="/images/profile-hex.png">
-            <h4>Your Name</h4>
-        </div>
-    </header>
-</div>
 
-<!-- Page-specific (main) content here -->
-<main class="container">
-
-        
         <section class="new-tweet">
 
             <h2>Compose Tweet</h2>
             <div class="tweetBox">
-                <form method="POST" action="/tweets">
-                    
+                <form class="tweet-box-form" method="POST" action="/tweets">
+
                     <div class="tweetTextArea">
-                        <textarea name="text" id="tweet-text" placeholder="what are you humming about" ></textarea>
+                        <textarea name="text" id="tweet-text" placeholder="what are you humming about"></textarea>
+
                     </div>
                     <div class="tweetButtonAndCounter">
                         <button type="submit">Tweet</button>
@@ -90,42 +92,12 @@
                     </div>
                 </form>
             </div>
-            </section>
+        </section>
 
-            <section id="tweet-list"> 
-                    <article class="tweet">
-                        <header class="tweet-header" >
-                     <div>
+        <section id="tweet-container"> </section>
+        </div>
 
-                            
-                            <img class="avatar" src="/images/avatar-512.webp">
-
-                        <h2>
-                            username
-                        </h2>
-                    </div>
-
-                    <div class="handle">
-                            @username
-                    </div>
-
-                    </header>
-
-                        <div class="tweet-body">
-                            <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae natus nostrum recusandae fugiat et aut eaque vel, similique 
-                            </p>
-                        </div>
-                        <footer class="tweet-footer">
-                     
-                            <div>  10 days ago </div>
-                            <div>  L R M </div>
-                        </footer>
-                    </article>
-                
-            </section>
-            </div>
- 
-</main>
+    </main>
 </body>
+
 </html>

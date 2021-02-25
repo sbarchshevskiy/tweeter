@@ -64,14 +64,12 @@
 
 #tweet-list {
     margin-top: 2em;
-    width: 100%;
-    
+    width: 100%; 
 }
 
 ul { 
     list-style-type: none; 
 }
-
 
 .tweet-header {
     display: flex;
