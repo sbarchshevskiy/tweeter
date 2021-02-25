@@ -1,5 +1,7 @@
 $(document).ready(function() {
 
+ 
+
   const loadTweets = function() {
     const url = `http://localhost:8081/tweets`;
     console.log('run test');
@@ -40,8 +42,6 @@ $(document).ready(function() {
 
         $("#tweet-text").empty();
         renderTweets(data);
-        loadTweets();
-        console.log('test');
 
       })
       .fail((err) => {
@@ -61,9 +61,7 @@ $(document).ready(function() {
       console.log('message too short');
     } else {
       console.log('message too long');
-      
     }
-    
   });
 
   const tweetBox = $(this).children('input[type="submit"]');
@@ -71,9 +69,7 @@ $(document).ready(function() {
   tweetBox.val('');
 });
 
-// const renderErrorMessage = function() {
 
-// }
 
 const renderTweets = function(tweets) {
   //ads elements to container
@@ -83,7 +79,13 @@ const renderTweets = function(tweets) {
   }
 };
 
+
+
 const createTweetElement = function(record) {
+  let printTime = howLongAgo(record.created_at);
+  let printTimeString = `${printTime} ago`;
+
+
   //creates a new tweet with the given template format
   let $tweet = $(`<article class="tweet">
   <header class="tweet-header" >
@@ -94,7 +96,7 @@ const createTweetElement = function(record) {
       <p>${record.content.text}</p>    
   </div>
   <footer class="tweet-footer">
-      <div>  ${record.created_at}</div>
+      <div>  ${printTimeString}</div>
       <div> 
       <ul>
       <li>👍</li>
@@ -107,4 +109,34 @@ const createTweetElement = function(record) {
 `);
   return $tweet;
 };
+
+
+const howLongAgo = function(milliseconds) {
+  let seconds = Math.floor((new Date() - milliseconds) / 1000);
+
+  let interval = seconds / 31536000;
+
+  if (interval > 1) {
+    return Math.floor(interval) + " years";
+  }
+  interval = seconds / 2592000;
+  if (interval > 1) {
+    return Math.floor(interval) + " months";
+  }
+  interval = seconds / 86400;
+  if (interval > 1) {
+    return Math.floor(interval) + " days";
+  }
+  interval = seconds / 3600;
+  if (interval > 1) {
+    return Math.floor(interval) + " hours";
+  }
+  interval = seconds / 60;
+  if (interval > 1) {
+    return Math.floor(interval) + " minutes";
+  }
+  return Math.floor(seconds) + " seconds";
+};
+
+
 
