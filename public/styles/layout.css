@@ -26,20 +26,15 @@ body {
   font-family: Bungee;
   margin-top: 120px;
 
-  
 }
 
 main {
   border: 2px solid gray;
   display: flex;
   justify-content: center;
-
   flex-direction: column;
   align-items: flex-start;
   width: 90%;
-  /* margin-right: 5%;
-  margin-left: 5%; */
-
 }
 
 
