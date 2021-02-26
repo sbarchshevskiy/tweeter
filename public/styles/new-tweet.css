@@ -6,20 +6,16 @@
 
 }
 
-.off-limit-text {
-    color: red;
-    font-family: Bungee;
-}
 
+/* 
 .newTweetFormArea {
     border: 2px solid red;
     display: block;
     width: 100%;
-}
+} */
 
 
 .newTweetForm {
-    border: 2px solid gray;
     display: flex;
     flex-direction: row ;
     width: 100%;
@@ -29,7 +25,11 @@
 #tweet-text{
     width: 100%;
     border: 0;
-    border-bottom: 2px solid rgb(34, 6, 6);
+    border-bottom: 5px solid rgb(34, 6, 6);
+    background-color: rgb(239, 240, 236);
+    border: 1px solid #ccc;
+
+    border: transparent; 
 
 }
 .tweetTextArea{
@@ -46,13 +46,11 @@
 }
 
 .userName {
-    border: 2px solid gray;
     justify-content: flex-start;
     width: 80%;
 }
 .likesRetweet{
     display: flex;
-    border: 2px solid gray;
     justify-content: flex-end;
     list-style-type: none;
 }
@@ -73,11 +71,17 @@
 
 ul { 
     list-style-type: none; 
+    display: flex;
 }
 
 .tweet-header {
     display: flex;
     justify-content: space-between;
+}
+
+.off-limit-text {
+    color: red;
+    font-family: Bungee;
 }
 
 .tweet-header > div{
@@ -86,9 +90,22 @@ ul {
 }
 
 .tweet {
+    transition: box-shadow .3s;
     border: 4px solid black;
     padding: 1em;
     width: 100%;
+    border: 1px groove rgb(41, 39, 39);
+    opacity: 60%;
+    background: #fff;
+
+    margin-bottom: 35px;
+    border-radius: 10px;
+    float: left;
+}
+.tweet.hover {
+    box-shadow: 12px 12px 2px 1px rgba(33,33,33,.2); 
+
+
 }
 .tweet-footer {
     display: flex;

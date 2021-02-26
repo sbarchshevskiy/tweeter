@@ -39,6 +39,9 @@
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
 
 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
@@ -57,34 +60,36 @@
                 <span>tweeter</span>
             </div>
             <div class="createNewTweet">
+
+            <div id="write-tag">
                 <p><strong>Write</strong> a new tweet</p>
+            </div>
             </div>
         </div>
     </nav>
 
-    <div class="userbox">
 
+<div class="header-container">
+    <div class="userbox">
         <header>
-            <div class="user">
-                <img src="/images/profile-hex.png">
-                <h4>your name</h4>
-            </div>
+            <figure class="user">
+                <img src="/images/profile-hex.png" alt="profile image">
+                <figcaption>your name</figcaption>
+            </figure>
+
         </header>
     </div>
 
-    <!-- Page-specific (main) content here -->
     <main class="container">
-
-
         <section class="new-tweet">
-
-            <h2>Compose Tweet</h2>
+            <h2></h2>
             <div class="tweetBox">
+                <div id="message-too-long-alert">
+                    message too long
+                </div>
                 <form class="tweet-box-form" method="POST" action="/tweets">
-
                     <div class="tweetTextArea">
-                        <textarea name="text" id="tweet-text" placeholder="what are you humming about"></textarea>
-
+                        <textarea name="text" id="tweet-text" placeholder="what are you humming about"></textarea> 
                     </div>
                     <div class="tweetButtonAndCounter">
                         <button type="submit">Tweet</button>
@@ -93,11 +98,11 @@
                 </form>
             </div>
         </section>
-
         <section id="tweet-container"> </section>
         </div>
-
     </main>
+</div>
+    
 </body>
 
 </html>

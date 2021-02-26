@@ -7,9 +7,7 @@ html {
 }
 
 
-
 .nav {
-    border: 2px solid gray;
     display : flex;
     justify-content: space-between;
     align-items: baseline;
@@ -20,23 +18,27 @@ html {
     height: 120px;
     padding: 1.5em;
     opacity: 100%;
-    background-color: #4056A1;
+    color: skyblue;
+    background-color: salmon;
 }
 
 .logo{
-    border: 2px solid gray;
     display: flex;
-    font-size: 24px;
+    font-size: 42px;
     justify-content: flex-end;
     outline: black;
 }
 
 .createNewTweet {
   
-    border: 2px solid gray;
     display: flex;
     align-items: flex-start;
     font-family: Sourc-sans-pro;
+    margin-right: 45px;
+}
+
+#write-tag {
+  font-weight: bolder;
 }
 
 

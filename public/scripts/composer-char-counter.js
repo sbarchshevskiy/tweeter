@@ -1,4 +1,4 @@
-$(document).ready(function () {
+$(document).ready(function() {
   $("#tweet-text").on("input", function (event) {
     const $inputText = $(event.target).closest("section");
     const $text = $inputText.find("#tweet-text");
@@ -12,5 +12,5 @@ $(document).ready(function () {
     } else {
       $counter.addClass("off-limit-text");
     }
-  })
-})
+  });
+});
