@@ -35,22 +35,16 @@ $(document).ready(function() {
       data: message
     })
       .done((data) => {
-        // $("#tweet-container").children('text').val('');
         $("#textarea").children('text').val('');
-
-
         loadTweets();
         renderTweets(data);
-
-        // $("#tweet-container").empty();
-
-        // $("#textarea").empty();
       })
+
       .fail((err) => {
         console.log('error message: ',err.message);
       })
-      .always(() => console.log('tweet was sent'));
 
+      .always(() => console.log('tweet was sent'));
   };
 
   $(".tweet-box-form").on('submit', function(event) {
@@ -61,7 +55,8 @@ $(document).ready(function() {
 
     if (message.length <= 140) {
       seizeEnteredTweet($(".tweet-box-form").serialize());
-    
+      $('#tweet-text').val('');
+
     } else {
       $("#message-too-long-alert").slideDown();
       console.log('message too long');
@@ -101,16 +96,16 @@ const createTweetElement = function(record) {
   <div><img class="avatar" src="/images/avatar-512.webp"><h2>${record.user.name}</h2></div>
   <div class="handle">${record.user.handle}</div>
   </header>
-    <div id="text-indent-tweet-box" class="tweet-body">
+    <div class="tweet-body">
       <p>${checkedString}</p>    
   </div>
   <footer class="tweet-footer">
       <div>  ${printTimeString}</div>
       <div> 
       <ul>
-      <li>👍</li>
-      <li>🏳</li>
-      <li>✉️</li>
+      <li>  👍 </li>
+      <li>  🏳 </li>
+      <li>  ✉️ </li>
       </ul>
       </div>
   </footer>
