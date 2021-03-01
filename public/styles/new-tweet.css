@@ -3,16 +3,9 @@
     justify-content: center;
     flex-direction: column;
     width: 100%;
-
+    padding: 15px;
+ 
 }
-
-
-/* 
-.newTweetFormArea {
-    border: 2px solid red;
-    display: block;
-    width: 100%;
-} */
 
 
 .newTweetForm {
@@ -55,9 +48,6 @@
     list-style-type: none;
 }
 
-.handle {
-    
-}
 
 .handle.hover {
     filter: brightness(100%);
@@ -103,13 +93,16 @@ ul {
 }
 .tweet.hover {
     box-shadow: 12px 12px 2px 1px rgba(33,33,33,.2); 
-
-
 }
 .tweet-footer {
     display: flex;
     border-top: black solid 4px;
     justify-content: space-between;
     padding-top: 0.5em;
+}
+
+#btn {
+    padding: 5px;
+    margin-top: 5px;
 }
 

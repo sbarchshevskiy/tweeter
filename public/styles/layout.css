@@ -80,6 +80,22 @@ h2 {
   overflow-wrap: anywhere;
 }
 
+#text-indent-tweet-box {
+  margin-right: 20px;
+}
+
+.tweet-footer {
+  margin-top: 15px;
+}
+
+.tweet-header {
+  margin-bottom: -15px;
+}
+
+#write-tag {
+  margin-right: 1.2em;
+
+}
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */

@@ -9,7 +9,6 @@ $(document).ready(function() {
       method: 'GET', // get request from db
     })
       .done((data) => {
-        
         $("#tweet-container").empty();
         renderTweets(data);
       })
@@ -36,8 +35,16 @@ $(document).ready(function() {
       data: message
     })
       .done((data) => {
+        // $("#tweet-container").children('text').val('');
+        $("#textarea").children('text').val('');
+
+
         loadTweets();
         renderTweets(data);
+
+        // $("#tweet-container").empty();
+
+        // $("#textarea").empty();
       })
       .fail((err) => {
         console.log('error message: ',err.message);
@@ -94,7 +101,7 @@ const createTweetElement = function(record) {
   <div><img class="avatar" src="/images/avatar-512.webp"><h2>${record.user.name}</h2></div>
   <div class="handle">${record.user.handle}</div>
   </header>
-    <div class="tweet-body">
+    <div id="text-indent-tweet-box" class="tweet-body">
       <p>${checkedString}</p>    
   </div>
   <footer class="tweet-footer">
