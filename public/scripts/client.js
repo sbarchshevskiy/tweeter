@@ -19,7 +19,7 @@ $(document).ready(function() {
 
       .always(() => console.log('tweet was sent'));
 
-    $(".tweet-box-form").on('submit', function(event) {
+    $(".tweet-box-form").on('submit', (event) => {
       event.preventDefault();
     });
 
@@ -47,25 +47,33 @@ $(document).ready(function() {
       .always(() => console.log('tweet was sent'));
   };
 
-  $(".tweet-box-form").on('submit', function(event) {
+  $(".tweet-box-form").on('submit', (event) => {
     // will pop a message where the tweet has exceeded 140 chars
     event.preventDefault();
 
     const message = $("#tweet-text").val();
 
+    if (message.length <= 0) {
+      $("#empty-tweet-box-alert").slideDown();
+      setTimeout(() => {
+        $("#empty-tweet-box-alert").slideUp();
+      }, 2500);
+    }
     if (message.length <= 140) {
       seizeEnteredTweet($(".tweet-box-form").serialize());
       $('#tweet-text').val('');
 
     } else {
       $("#message-too-long-alert").slideDown();
-      console.log('message too long');
+      setTimeout(() => {
+        $("#message-too-long-alert").slideUp();
+      },2500);
     }
   });
  
 });
 
-const renderTweets = function(tweets) {
+const renderTweets = (tweets) => {
   // goes over existing db and adds the additional tweets
   for (let tweet of tweets) {
     const element = createTweetElement(tweet);
@@ -74,14 +82,14 @@ const renderTweets = function(tweets) {
 };
 
 
-const escape =  function(str) {
+const escape =  (str) => {
   // escapes possible maliscious characters
   let div = document.createElement('div');
   div.appendChild(document.createTextNode(str));
   return div.innerHTML;
 };
 
-const createTweetElement = function(record) {
+const createTweetElement = (record) => {
   //parses a function and determines number of sec, min, hours
   let printTime = howLongAgo(record.created_at);
   let printTimeString = `${printTime} ago`;
@@ -114,7 +122,7 @@ const createTweetElement = function(record) {
   return $tweet;
 };
 
-const howLongAgo = function(milliseconds) {
+const howLongAgo = (milliseconds) => {
   // calculates how much time has passed since
   // a tweet was posted
   let seconds = Math.floor((new Date() - milliseconds) / 1000);

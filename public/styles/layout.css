@@ -76,6 +76,12 @@ h2 {
   color: black;
  }
 
+ #empty-tweet-box-alert{
+  display: none;
+  color: black;
+ }
+
+
 .tweet-body {
   overflow-wrap: anywhere;
 }

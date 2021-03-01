@@ -5,7 +5,7 @@ This project was build with HTML, CSS, JS, jQuery and AJAX.
 
 ## Getting Started
 
-1. install dependencies: body-parser, chance, express, jquerry and md5 via mdn install command 
+1. install dependencies using `npm intall` command in your terminal
 2. run the app via `npm run start`
 4. app will run on http://localhost:8081/
 
@@ -13,6 +13,11 @@ This project was build with HTML, CSS, JS, jQuery and AJAX.
 
 - Express
 - Node 5.10.x or above
+- body-parser, 
+- chance 
+- express 
+- jquerry 
+- md5
 
 ## Screenshots
 

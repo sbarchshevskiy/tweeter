@@ -88,9 +88,14 @@
         <section class="new-tweet">
             <h2></h2>
             <div class="tweetBox">
-                <div id="message-too-long-alert">
-                    nope
+                <div id="empty-tweet-box-alert">
+                    please write a tweet
                 </div>
+                <div id="message-too-long-alert">
+                    message too long
+                   
+                </div>
+                
                 <form class="tweet-box-form" method="POST" action="/tweets">
                     <div class="tweetTextArea">
                         <textarea name="text" id="tweet-text" placeholder="what are you humming about"></textarea> 
