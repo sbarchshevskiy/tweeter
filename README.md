@@ -13,3 +13,8 @@ This project was build with HTML, CSS, JS, jQuery and AJAX.
 
 - Express
 - Node 5.10.x or above
+
+## Screenshots
+
+![Screenshot](cap1.png)
+![Screenshot](cap2.png)
